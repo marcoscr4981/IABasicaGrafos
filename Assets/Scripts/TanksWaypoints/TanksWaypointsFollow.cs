@@ -90,6 +90,13 @@ public class TanksWaypointsFollow : MonoBehaviour {
         currentWP = 0;
     }
 
+    // Nuevo método: Ir al punto 8
+    public void GotoEjercicio()
+    {
+        graph.AStar(currentNode, waypoints[8]);
+        currentWP = 0;
+    }
+
     // =============================================================================
     // BUCLE DE MOVEMENTO (LateUpdate)
     // =============================================================================

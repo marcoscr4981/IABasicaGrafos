@@ -1,29 +1,40 @@
-# Descrición
+# IA Básica Grafos
 
-Emprega este arquivo para describir os cambios do teu proxecto.
+Con este ejercicio he modificado una ruta para ir a un punto y creado una nueva zona con un botón para que el tanque vaya a esa ubicación.
 
-Utiliza o formato en markdown coas marcas básicas que aparcen no seguinte exemplo:
+> Con este ejercicio he tenido bastantes problemas. Cuando ejecutaba el programa se colgaba Unity y me fue complicado intentar hacer pruebas.
 
-# Título principal
-## Subtítulo
+## Nuevo camino
 
-Texto normal con **negriña** e *cursiva*.
+Modifiqué la posición de los nodos para la acción del primer botón del Canvas (`GotoRuin`).
 
-- Lista 1
-- Lista 2
 
-[Ligazón](https://exemplo.com)
+## Nuevo punto
 
+He creado un nuevo punto `WP009` y un nuevo botón `Ejercicio Button`.
+
+El nuevo punto lo he añadido en el Game Object WPManager:
+
+- **Waypoints:** Es el elemento número 8.
+- **Links:**
+  - **Node 1:** WP009
+  - **Node 2:** WP006
+  - **Dir:** BI
+
+En el script `TanksWaypointsFollow` he añadido el método:
 
 ```csharp
-using UnityEngine;
-
-public class OlaMundo : MonoBehaviour
+public void GotoEjercicio()
 {
-    void Start()
-    {
-        Debug.Log("Ola, mundo desde C#!");
-    }
+    graph.AStar(currentNode, waypoints[8]);
+    currentWP = 0;
 }
-
 ```
+
+Cuando se ejecuta el juego y se hace clic en el botón `Ejercicio Button`, hace el siguiene trayecto: 
+
+WP001 > WP002 > WP007 > WP006 > WP009
+
+En cambio si como `Node 2` añado el punto `WP003`, hace el siguiente recorrido:
+
+WP001 > WP002 > WP007 > WP003 > WP009
