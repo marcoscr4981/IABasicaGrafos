@@ -1,8 +1,8 @@
 # IA Básica Grafos
 
-Con este ejercicio he modificado una ruta para ir a un punto y creado una nueva zona con un botón para que el tanque vaya a esa ubicación.
+Para este ejercicio he modificado una ruta para ir a un punto y creado una nueva zona con un botón para que el tanque vaya a esa ubicación.
 
-> Con este ejercicio he tenido bastantes problemas. Cuando ejecutaba el programa se colgaba Unity y me fue complicado intentar hacer pruebas.
+> He tenido bastantes problemas con este ejercicio. Cuando ejecutaba el programa se colgaba Unity y me fue complicado intentar hacer pruebas.
 
 ## Nuevo camino
 
